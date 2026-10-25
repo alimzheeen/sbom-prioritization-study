@@ -1,0 +1,5 @@
+Application,"npm audit (package, advisory) pairs",Our matcher,Both,Only npm audit,Only our matcher,Jaccard agreement
+ghostfolio,305,313,305,0,8,0.97
+firefly-iii,163,163,163,0,0,1.0
+akaunting,181,181,181,0,0,1.0
+invoiceninja,165,165,165,0,0,1.0

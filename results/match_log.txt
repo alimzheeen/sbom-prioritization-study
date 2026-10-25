@@ -1,0 +1,6 @@
+Loaded advisories for 4738 npm/Packagist packages
+actual         components= 1914 vulnerable_components=  74 findings=228
+akaunting      components= 1668 vulnerable_components= 105 findings=298
+firefly-iii    components= 1024 vulnerable_components=  76 findings=241
+ghostfolio     components= 2194 vulnerable_components= 124 findings=412
+invoiceninja   components= 1205 vulnerable_components=  96 findings=297

@@ -1,0 +1,6 @@
+cve,package,cvss_t0,epss_t0,epss_pct_t0,kev_t0,kev_now,weaponized_t0,weaponized_now,rank_CVSS only,rank_EPSS only,rank_Combined (CVSS+EPSS+KEV)
+CVE-2025-54068,livewire/livewire,9.2,0.00121,0.296333373652748,False,True,False,True,6.5,47.0,28.0
+CVE-2025-31125,vite,7.5,0.06569,0.8537726239662845,False,True,True,True,34.5,7.0,6.0
+CVE-2025-46565,vite,6.0,0.00105,0.2709576073186104,False,False,False,True,69.5,56.0,58.0
+CVE-2025-32395,vite,6.0,0.0002,0.0302729836579046,False,False,False,True,69.5,103.5,92.0
+CVE-2025-31486,vite,5.3,0.00014,0.0098803786629657,False,False,False,True,80.5,107.5,101.0

@@ -1,0 +1,6 @@
+Project,Components,Vulnerable components,Findings,Critical/High (CVSS >= 7),Dev-only findings,Dev-only share,Exploited now (KEV or public exploit)
+Ghostfolio,2194,124,412,204,153.0,0.371,10
+Actual Budget,1914,74,228,130,,,9
+Firefly III,1024,76,241,114,168.0,0.697,10
+Akaunting,1668,105,298,149,103.0,0.346,3
+Invoice Ninja,1205,96,297,143,45.0,0.152,11
