@@ -1,0 +1,6 @@
+Application,Findings,Exploited,Recall@10 CVSS,Recall@10 Comb,Recall@20 CVSS,Recall@20 Comb,Recall@50 CVSS,Recall@50 Comb,Full coverage CVSS (% of list),Full coverage Comb (% of list),First exploited CVSS,First exploited Comb
+Ghostfolio,412,10,0.0,0.2,0.0,0.3,0.0,0.4,95.8,70.6,153.5,1.0
+Actual Budget,228,9,0.0,0.22,0.0,0.44,0.0,0.56,97.1,68.4,101.0,1.0
+Firefly III,241,10,0.0,0.3,0.0,0.4,0.0,0.5,96.3,68.5,82.5,1.0
+Akaunting,298,3,0.33,0.33,0.33,0.67,0.33,0.67,90.1,70.5,9.5,1.0
+Invoice Ninja,297,11,0.09,0.27,0.09,0.45,0.09,0.55,96.0,70.0,7.5,1.0

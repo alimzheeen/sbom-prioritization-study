@@ -1,0 +1,4 @@
+Subset (4 apps with scope data),Findings,Dev-only,Dev-only share
+All findings,1248,469,0.376
+High/Critical (CVSS >= 7),610,250,0.41
+Exploited now,34,19,0.559

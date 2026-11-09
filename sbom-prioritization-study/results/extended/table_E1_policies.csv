@@ -1,0 +1,7 @@
+Policy,Findings selected,Share of all findings,Exploited covered,Coverage,Efficiency
+CVSS >= 9.0 (Critical),86,0.058,2/43,0.047,0.023
+CVSS >= 7.0 (High+Critical),740,0.501,14/43,0.326,0.019
+CVSS >= 4.0 (Medium and above),1360,0.921,39/43,0.907,0.029
+EPSS >= 0.10,18,0.012,14/43,0.326,0.778
+CISA KEV listed,6,0.004,6/43,0.14,1.0
+CVSS >= 7.0 OR EPSS >= 0.10 OR KEV,744,0.504,18/43,0.419,0.024

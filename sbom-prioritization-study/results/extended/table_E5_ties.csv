@@ -1,0 +1,6 @@
+Application,Findings,Distinct CVSS values,Largest tie group,Most common score,Distinct combined scores
+Ghostfolio,412,52,84,7.5,276
+Actual Budget,228,47,47,7.5,185
+Firefly III,241,47,48,7.5,210
+Akaunting,298,46,67,7.5,237
+Invoice Ninja,297,47,63,7.5,249

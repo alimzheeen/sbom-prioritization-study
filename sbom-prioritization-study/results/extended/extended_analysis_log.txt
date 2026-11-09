@@ -1,0 +1,113 @@
+E1 remediation policies (pooled, n = 1476 findings, 43 exploited)
+                            Policy  Findings selected  Share of all findings Exploited covered  Coverage  Efficiency
+            CVSS >= 9.0 (Critical)                 86                  0.058              2/43     0.047       0.023
+       CVSS >= 7.0 (High+Critical)                740                  0.501             14/43     0.326       0.019
+    CVSS >= 4.0 (Medium and above)               1360                  0.921             39/43     0.907       0.029
+                      EPSS >= 0.10                 18                  0.012             14/43     0.326       0.778
+                   CISA KEV listed                  6                  0.004              6/43     0.140       1.000
+CVSS >= 7.0 OR EPSS >= 0.10 OR KEV                744                  0.504             18/43     0.419       0.024
+
+E2 effort per application
+  Application  Findings  Exploited  Recall@10 CVSS  Recall@10 Comb  Recall@20 CVSS  Recall@20 Comb  Recall@50 CVSS  Recall@50 Comb  Full coverage CVSS (% of list)  Full coverage Comb (% of list)  First exploited CVSS  First exploited Comb
+   Ghostfolio       412         10            0.00            0.20            0.00            0.30            0.00            0.40                            95.8                            70.6                 153.5                   1.0
+Actual Budget       228          9            0.00            0.22            0.00            0.44            0.00            0.56                            97.1                            68.4                 101.0                   1.0
+  Firefly III       241         10            0.00            0.30            0.00            0.40            0.00            0.50                            96.3                            68.5                  82.5                   1.0
+    Akaunting       298          3            0.33            0.33            0.33            0.67            0.33            0.67                            90.1                            70.5                   9.5                   1.0
+Invoice Ninja       297         11            0.09            0.27            0.09            0.45            0.09            0.55                            96.0                            70.0                   7.5                   1.0
+pooled recall@10: CVSS=0.047 Comb=0.256
+pooled recall@20: CVSS=0.047 Comb=0.419
+pooled recall@50: CVSS=0.047 Comb=0.512
+Wilcoxon paired (rank_cvss > rank_comb) over 43 exploited findings: stat=946.0 p=5.59e-09; improved=43, worse=0
+
+E3 scope
+Subset (4 apps with scope data)  Findings  Dev-only  Dev-only share
+                   All findings      1248       469           0.376
+      High/Critical (CVSS >= 7)       610       250           0.410
+                  Exploited now        34        19           0.559
+exploited dev-only packages: {'vite': 16, 'webpack-dev-server': 3}
+exploited production packages: {'vite': 8, 'symfony/http-foundation': 3, 'livewire/livewire': 2, 'webpack-dev-server': 2}
+
+E4 unique CVEs: 509 CVEs, 12 exploited
+median rank exploited: CVSS=323.0 (63.5%), Comb=52.5 (10.3%)
+recall@20 unique: CVSS=0.08 Comb=0.33; recall@50: CVSS=0.08 Comb=0.50
+AUC CVSS-only for current exploitation (unique CVEs, non-circular): 0.422 p=0.822
+share of exploited findings by package: {'vite': 0.744, 'webpack-dev-server': 0.116, 'symfony/http-foundation': 0.07, 'livewire/livewire': 0.047, 'tar-fs': 0.023}
+           cve                 package  cvss_now  epss_now  kev_now  r_cvss_u  r_comb_u
+CVE-2025-54068       livewire/livewire       9.2   0.97321     True      17.5       1.0
+CVE-2025-31125                    vite       7.5   0.65189     True     187.0       2.0
+CVE-2025-30208                    vite       7.5   0.74771    False     187.0       8.0
+CVE-2024-12905                  tar-fs       7.5   0.02255    False     187.0      16.0
+CVE-2025-31486                    vite       5.3   0.40461    False     411.0      21.0
+CVE-2025-64500 symfony/http-foundation       7.3   0.01408    False     233.5      37.0
+CVE-2025-32395                    vite       6.0   0.01775    False     346.5      68.0
+CVE-2025-46565                    vite       6.0   0.01170    False     346.5     138.0
+CVE-2026-39365                    vite       6.3   0.00982    False     299.5     152.0
+CVE-2025-62522                    vite       6.0   0.01054    False     346.5     158.0
+CVE-2026-14620      webpack-dev-server       4.7   0.00521    False     463.5     348.0
+CVE-2025-58751                    vite       2.3   0.01214    False     498.0     350.0
+
+E5 ties
+  Application  Findings  Distinct CVSS values  Largest tie group  Most common score  Distinct combined scores
+   Ghostfolio       412                    52                 84                7.5                       276
+Actual Budget       228                    47                 47                7.5                       185
+  Firefly III       241                    47                 48                7.5                       210
+    Akaunting       298                    46                 67                7.5                       237
+Invoice Ninja       297                    47                 63                7.5                       249
+
+E6 weight sensitivity
+ w_CVSS  w_EPSS  w_KEV  Median position of exploited now (%)  Temporal AUC  Temporal p
+    0.0     1.0    0.0                                   5.4         0.417       0.736
+    0.1     0.9    0.0                                   6.1         0.425       0.717
+    0.2     0.8    0.0                                   6.7         0.448       0.656
+    0.3     0.7    0.0                                   8.3         0.455       0.635
+    0.4     0.6    0.0                                   9.6         0.465       0.607
+    0.5     0.5    0.0                                  15.8         0.486       0.546
+    0.6     0.4    0.0                                  28.9         0.507       0.483
+    0.7     0.3    0.0                                  41.1         0.509       0.477
+    0.8     0.2    0.0                                  50.6         0.541       0.382
+    0.9     0.1    0.0                                  58.7         0.547       0.365
+    1.0     0.0    0.0                                  69.5         0.532       0.406
+    0.0     0.9    0.1                                   5.4         0.417       0.736
+    0.1     0.8    0.1                                   6.1         0.429       0.707
+    0.2     0.7    0.1                                   6.7         0.448       0.656
+    0.3     0.6    0.1                                   8.3         0.461       0.618
+    0.4     0.5    0.1                                  10.5         0.469       0.596
+    0.5     0.4    0.1                                  25.4         0.499       0.506
+    0.6     0.3    0.1                                  39.4         0.507       0.483
+    0.7     0.2    0.1                                  49.8         0.526       0.426
+    0.8     0.1    0.1                                  57.6         0.547       0.365
+    0.9     0.0    0.1                                  69.5         0.532       0.406
+    0.0     0.8    0.2                                   5.4         0.417       0.736
+    0.1     0.7    0.2                                   6.1         0.434       0.692
+    0.2     0.6    0.2                                   7.1         0.450       0.651
+    0.3     0.5    0.2                                   8.8         0.457       0.629
+    0.4     0.4    0.2                                  15.8         0.486       0.546
+    0.5     0.3    0.2                                  31.1         0.503       0.494
+    0.6     0.2    0.2                                  45.6         0.533       0.404
+    0.7     0.1    0.2                                  56.0         0.535       0.398
+    0.8     0.0    0.2                                  69.5         0.532       0.406
+    0.0     0.7    0.3                                   5.4         0.417       0.736
+    0.1     0.6    0.3                                   6.1         0.442       0.672
+    0.2     0.5    0.3                                   7.9         0.453       0.640
+    0.3     0.4    0.3                                  10.5         0.472       0.585
+    0.4     0.3    0.3                                  27.2         0.501       0.500
+    0.5     0.2    0.3                                  42.1         0.514       0.460
+    0.6     0.1    0.3                                  55.2         0.539       0.387
+    0.7     0.0    0.3                                  69.5         0.532       0.406
+temporal AUC range over grid: 0.417-0.547; min p = 0.365
+median position range: 5.4-69.5
+CVSS-only row: [{'w_CVSS': 1.0, 'w_EPSS': 0.0, 'w_KEV': 0.0, 'Median position of exploited now (%)': 69.5, 'Temporal AUC': 0.532, 'Temporal p': 0.406}]
+
+E7 power: n_pos=5, n_neg=105; critical AUC (alpha=0.05, one-sided) = 0.718
+positives needed for 80% power at true AUC 0.7 (same prevalence): about 13 (with 273 negatives)
+positives needed for 80% power at true AUC 0.8 (same prevalence): about 6 (with 126 negatives)
+ True AUC  Power (5 vs 105)
+      0.6              0.18
+      0.7              0.45
+      0.8              0.79
+      0.9              0.98
+
+E8 unique CVEs with EPSS: 508; Spearman CVSS~EPSS rho=0.33 p=5.62e-14
+High/Critical unique CVEs: 242, with EPSS >= 0.10: 5 (2.1%)
+High/Critical findings: 740, with EPSS>=0.10: 14
+exploited findings with CVSS < 7: 29 of 43
