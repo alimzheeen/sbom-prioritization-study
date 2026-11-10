@@ -28,9 +28,12 @@ Research topic: **SBOM-Based Identification and Prioritization of Vulnerable Sof
 | `code/validate_npm_audit.py` | Compares the matcher with `npm audit` (reference scanner) |
 | `code/enrich.py` | Adds CVSS, EPSS, KEV and exploit evidence at T0 and now |
 | `code/analyze.py` | Experiment: alert volume, CVSS-only vs combined ranking, temporal validation, figures |
+| `code/extended_analysis.py` | Final paper (Assignment 6): remediation-policy coverage/efficiency, recall@k, scope of exploited findings, de-duplicated CVE check, CVSS ties, weight sensitivity, power of the temporal test |
 
 Run everything: `pip install -r requirements.txt && bash run_all.sh`
 
 ## Results
 
 `results/table_*.csv`, `results/fig*.png`, `results/findings_final.csv` (one row per finding).
+
+Additional analyses for the final paper: `results/extended/` (`table_E1`–`table_E7`, `fig3_weight_sensitivity.png`, `extended_analysis_log.txt`).

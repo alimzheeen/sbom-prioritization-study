@@ -27,3 +27,5 @@ python code/match_vulns.py data/sbom ext/advisory-database/advisories/github-rev
 python code/enrich.py results/findings_raw.csv ext/cvssbt_t0.csv ext/cvssbt_now.csv results/findings_enriched.csv
 python code/analyze.py results/findings_enriched.csv data/sbom results data/lockfiles | tee results/analysis_log.txt
 python code/validate_npm_audit.py results/findings_raw.csv results/npm_audit results/table_validation.csv
+mkdir -p results/extended
+python code/extended_analysis.py results/findings_final.csv results/extended
